@@ -1,9 +1,9 @@
 import './App.css';
-import { PokemonsList } from './components/PokemonsList/pokemons-list';
+import { NamePokemonsList } from './components/getNamePokemons/getNamePokemons';
 function App() {
   return (
   <> 
-  <PokemonsList /> 
+  <NamePokemonsList/> 
   </>
   );
 }

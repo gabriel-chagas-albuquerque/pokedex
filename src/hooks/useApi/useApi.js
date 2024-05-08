@@ -8,5 +8,5 @@ export function useApi(url) {
        })
         
    },[url])
-return {data}
+return data
 }
