@@ -1,14 +1,20 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Ability } from "../Ability/Ability";
-import { Move } from "../Move/Move";
+import { Ability } from "./Ability/Ability";
+import { Move } from "./Move/Move";
+import React, {useContext} from 'react'
+import { ThemeContext } from "../../contexts/theme-context"
+import styled from "styled-components";
+import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 async function getPokemonDetails(id){
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     return await response.json()
 }
 export function PokemonDetails() {
+    const { theme } = useContext(ThemeContext)
     const [pokemon,setPokemon] = useState({})
     const [abilities,setAbilities] = useState([])
     const [moves,setMoves] = useState([])
@@ -29,7 +35,11 @@ export function PokemonDetails() {
      
       
       return(
-        <div>
+        <div style={{backgroundColor:theme.background, color:theme.color, display:'flex', flexDirection:'column', alignItems:'center'}}>
+        <Link to='/' style={{backgroundColor:theme.background, color:theme.color}}>
+          <button style={{backgroundColor:theme.background, color:theme.color, border:'transparent', cursor:'pointer'}} ><FontAwesomeIcon icon={faCircleArrowLeft} style={{fontSize:'50px'}} /> </button>
+          </Link>
+        <Main>
           <img src={pokemon.sprites?.front_default} alt={pokemon.name} />
           <h1>{pokemon.name}</h1>
           <h2>Abilities</h2>
@@ -46,9 +56,17 @@ export function PokemonDetails() {
               <Move key={index} url={url} />
             )
           })}
-          <Link to='/'>
-          <button>Voltar para a página principal</button>
-          </Link>
+        </Main>
         </div>
       )
 }
+
+const Main = styled.main`
+   padding:10px 20px;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+   max-width:1350px;
+   heigth:100%;
+`

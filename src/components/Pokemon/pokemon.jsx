@@ -75,10 +75,10 @@ const Card = styled.div`
     border-radius:10px;
     background-color: ${props => props.bgcolor};
     text-decoration:#000;
-    min-height:268px;
+    heigth:250px;
   ` 
   const Img = styled.img`
-    width:60%;
+    width:50%;
   `
   
   const TitlePokemon = styled.h1`

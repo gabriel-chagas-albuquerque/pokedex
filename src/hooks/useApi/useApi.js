@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 export function useApi(url) {
     const [data,setData] = useState([])
     const [error, setError] = useState(null)
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     useEffect(() =>{
-        setIsLoading(true)
         fetch(url).then(response => response.json()).then(data => {
          setData(data)
          setIsLoading(false)
