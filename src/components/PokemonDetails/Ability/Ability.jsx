@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import styled from "styled-components"
 
 export function Ability(props) {
     const [nameAbility, setNameAbility] = useState('')
@@ -15,8 +16,15 @@ export function Ability(props) {
     },[props.url])
     return(
         <>
-        <h3>{nameAbility}</h3>
-        <p>{effectAbility}</p>
+        <H3>{nameAbility}</H3>
+        <P>{effectAbility}</P>
         </>
     )
 }
+
+const H3 = styled.h3`
+    text-transform = capitalize;
+`
+const P = styled.p`
+    text-transform = capitalize;
+`

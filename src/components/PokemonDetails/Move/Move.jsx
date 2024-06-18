@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import styled from "styled-components"
 
 export function Move(props) {
     const [nameMove, setNameMove] = useState('')
@@ -11,10 +12,12 @@ export function Move(props) {
         }
         getMoveDetails(props.url)
     },[props.url])
-    return(
-        <>
-        <h3>{nameMove}</h3>
-        {/* <p>{effectMove}</p> */}
-        </>
+    return( 
+        <NameMove>{nameMove}</NameMove>
     )
 }
+
+const NameMove = styled.p`
+    font-size: 18px;
+    text-transform:capitalize;
+`

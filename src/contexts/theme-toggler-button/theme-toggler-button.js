@@ -9,7 +9,7 @@ export const ThemeTogglerButton = () => {
   
     return(
         <div style={{backgroundColor:theme.background}}>
-         <ButtonTheme onClick={()=>setTheme(theme === themes.light ? themes.dark : themes.light)}>{theme === themes.light ? <FontAwesomeIcon icon={faMoon} style={{fontSize:'30px'}} /> : <FontAwesomeIcon icon={faSun} style={{fontSize:'30px'}}/>}</ButtonTheme> 
+         <ButtonTheme onClick={()=>setTheme(theme === themes.light ? themes.dark : themes.light)}>{theme === themes.light ? <FontAwesomeIcon icon={faMoon} style={{fontSize:'30px', width:'30px'}} /> : <FontAwesomeIcon icon={faSun} style={{fontSize:'30px', width:'30px'}}/>}</ButtonTheme> 
         </div>
     )
 }
