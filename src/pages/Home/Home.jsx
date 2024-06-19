@@ -64,7 +64,7 @@ export function Home() {
             <Header
               style={{ backgroundColor: theme.background, color: theme.color }}
             >
-              <Logo src="../../images/background-image.png" alt="Logo" />
+              <Logo src="../../images/logo.png" alt="Logo" />
               <Input
                 type="text"
                 value={busca}
@@ -128,7 +128,7 @@ export function Home() {
             <Header
               style={{ backgroundColor: theme.background, color: theme.color }}
             >
-              <Logo src="../../images/background-image.png" alt="Logo" />
+              <Logo src="../../images/logo.png" alt="Logo" />
               <Input
                 type="text"
                 value={busca}

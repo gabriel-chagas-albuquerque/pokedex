@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Projeto Pokedex
+Se trata de uma página que mostra uma lista de pokemons contendo nome, imagem e tipos do pokemon, ao clicar no pokemon, o usuário é levado para outra página, onde possui informações sobre as habilidades e os movimentos do pokemon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Propósito do Projeto
+Esse projeto foi realizado com o propósito de exercitar minhas habilidades em React, me permitindo aprender o React de maneira prática.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- **Botão "Mostrar Mais"**, inicialmente, a página mostra 10 pokemons, cada vez que o usuário clica no botão mostrar mais, a página mostra mais 10 pokemons, até que não tenha mais pokemons para mostrar
 
-### `npm start`
+- **Botão para Alternar entre os temas claro e escuro**, no menu, possui um ícone de um sol ou uma lua, clica nesse botão irá alternar o tema da página entre claro e escuro
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Filtros de busca dos pokemons por nome e tipo**, o usuário pode fazer uma busca por algum ou alguns pokemons em específico digitando seu nome, ou selecionando o tipo do pokemon
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Ferramentas Utilizadas
 
-### `npm test`
+- **React-router-dom** -> Para criar as rotas da página, deixando a aplicação uma Single Page Aplication (SPA), o que, na prática, faz com que a navegação na página seja mais fluida.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Style-components** -> Essa biblioteca serve para facilitar a estilização de componentes React, permitindo um código mais organizado e uma estilização mais eficiente e produtiva
 
-### `npm run build`
+- **Font Awesome** -> O Font Awesome foi utilizado para obter os ícones do botão de alternar o tema entre claro e escuro
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Passo-a-passo Instalação e execução do projeto
+### Download do arquivo zip do projeto ou usar um git clone
+- Clique no botão **Code**
+#### Download do Arquivo Zip
+- Clique no botão circulado abaixo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Download arquivo zip](image.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Abrir um terminal na pasta do projeto que foi baixada ou, no caso do VSCode, você pode abrir o projeto no VSCode e usar o terminal através do VSCode
 
-### `npm run eject`
+- Digitar os seguintes comandos:
+```
+npm install 
+npm start  
+```
+#### Git Clone
+- Copiar o link clicando no botão marcado na imagem abaixo
+![copiar link git clone](image-1.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Abrir um terminal na pasta onde você pretende colocar o projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Digitar os seguintes comandos
+```
+git clone *link copiado*
+cd *nome do projeto*
+npm install
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

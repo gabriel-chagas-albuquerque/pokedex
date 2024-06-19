@@ -12,7 +12,7 @@ export function Details() {
     <div style={{minHeight:'100vh'}}>
     <GlobalStyle />
       <Header style={{ backgroundColor: theme.background, color: theme.color }}>
-        <Logo src="../../images/background-image.png" alt="Logo" />
+        <Logo src="../../images/logo.png" alt="Logo" />
         <ThemeTogglerButton />
       </Header>
       <PokemonDetails />
