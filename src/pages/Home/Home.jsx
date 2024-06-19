@@ -196,6 +196,7 @@ const TitleCarregando = styled.h1`
   height: 100vh;
   justify-content: center;
   align-items: center;
+  font-family:'Caveat', cursive;
 `;
 const Header = styled.header`
   display: flex;
@@ -204,6 +205,10 @@ const Header = styled.header`
   padding: 5px 10px;
   width: 100%;
   margin-bottom:5px;
+  @media (max-width:525px) {
+  flex-direction:column;
+  gap:10px;
+  }
 `;
 const Input = styled.input`
   padding: 3px;
@@ -212,8 +217,11 @@ const Input = styled.input`
   font-family:'Caveat',cursive;
 `;
 const Select = styled.select`
-    padding: 5px
+    padding: 3px;
+    border-radius: 6px;
     font-family:'Caveat',cursive;
+    cursor:pointer;
+  }
 `
 const Option = styled.option`
     cursor:pointer;

@@ -5,8 +5,7 @@ export function Pokemon(props) {
   const [infosPokemon, setInfosPokemon] = useState([]);
   const [typePokemon, setTypePokemon] = useState(null);
   let colorCard = "#ccc";
-  let iconTypePokemon =
-    "https://archives.bulbagarden.net/media/upload/thumb/a/ae/Normal_icon.png/20px-Normal_icon.png";
+  let iconTypePokemon = "normal";
   useEffect(() => {
     async function getPokemonDetails() {
       const response = await fetch(
@@ -111,102 +110,83 @@ export function Pokemon(props) {
           {infosPokemon.types?.map((typePokemon, index) => {
             switch (typePokemon.type.name) {
               case "grass":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/c/cb/Grass_icon.png/20px-Grass_icon.png";
+                iconTypePokemon = 'grass'
                 break;
 
               case "fire":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/5/5e/Fire_icon.png/20px-Fire_icon.png";
+                iconTypePokemon = 'fire'
                 break;
 
               case "water":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/7/7f/Water_icon.png/20px-Water_icon.png";
+                iconTypePokemon = 'water'
                 break;
 
               case "bug":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/7/79/Bug_icon.png/20px-Bug_icon.png";
+                iconTypePokemon = 'bug'
                 break;
 
               case "flying":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/f/f0/Flying_icon.png/20px-Flying_icon.png";
+                iconTypePokemon = 'flying'
                 break;
 
               case "poison":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/8/84/Poison_icon.png/20px-Poison_icon.png";
+                iconTypePokemon = 'poison'
                 break;
 
               case "electric":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/a/af/Electric_icon.png/20px-Electric_icon.png";
+                iconTypePokemon = 'electric'
                 break;
 
               case "ground":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/5/58/Ground_icon.png/20px-Ground_icon.png";
+                iconTypePokemon = 'ground'
                 break;
 
               case "fighting":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/7/7d/Fighting_icon.png/20px-Fighting_icon.png";
+                iconTypePokemon = 'fighting'
                 break;
 
               case "fairy":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/5/5a/Fairy_icon.png/20px-Fairy_icon.png";
+                iconTypePokemon = 'fairy'
                 break;
 
               case "rock":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/f/ff/Rock_icon.png/20px-Rock_icon.png";
+                iconTypePokemon = 'rock'
                 break;
 
               case "ghost":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/8/82/Ghost_icon.png/20px-Ghost_icon.png";
+                iconTypePokemon = 'ghost'
                 break;
 
               case "steel":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/b/b8/Steel_icon.png/20px-Steel_icon.png";
+                iconTypePokemon = 'steel'
                 break;
 
               case "stellar":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/9/9f/Stellar_icon.png/20px-Stellar_icon.png";
+                iconTypePokemon = 'stellar'
                 break;
 
               case "psychic":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/a/a6/Psychic_icon.png/20px-Psychic_icon.png";
+                iconTypePokemon = 'psychic'
                 break;
 
               case "ice":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/8/83/Ice_icon.png/20px-Ice_icon.png";
+                iconTypePokemon = 'ice';
                 break;
 
               case "dragon":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/9/91/Dragon_icon.png/20px-Dragon_icon.png";
+                iconTypePokemon = 'dragon';
                 break;
 
               case "dark":
-                iconTypePokemon =
-                  "https://archives.bulbagarden.net/media/upload/thumb/3/33/Dark_icon.png/20px-Dark_icon.png";
+                iconTypePokemon = 'dark';
                 break;
               default:
                 break;
             }
             return (
               <Container key={index}>
-                <img
-                  src={iconTypePokemon}
-                  style={{ width: "25px", height: "25px" }}
+                <IconType
+                  src={`./images/${iconTypePokemon}.png`}
                   alt="icon type pokemon"
                 />
                 <Type key={index}>{typePokemon.type.name}</Type>
@@ -255,3 +235,7 @@ const Container = styled.div`
   align-items: center;
   gap: 3px;
 `;
+const IconType = styled.img`
+  width: 20px;
+  height:20px;
+`

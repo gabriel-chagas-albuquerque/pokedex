@@ -20,7 +20,7 @@ export function PokemonDetails() {
   const [abilities, setAbilities] = useState([]);
   const [moves, setMoves] = useState([]);
   const { id } = useParams();
-  
+  let iconTypePokemon = 'normal'
 
   useEffect(() => {
     async function fetchData() {
@@ -67,8 +67,86 @@ export function PokemonDetails() {
         <h3>Types:</h3>
         <TypePokemon>
           {pokemon.types?.map((type,index) => {
-            return( 
+            switch (type.type.name) {
+                case "grass":
+                  iconTypePokemon = 'grass'
+                  break;
+  
+                case "fire":
+                  iconTypePokemon = 'fire'
+                  break;
+  
+                case "water":
+                  iconTypePokemon = 'water'
+                  break;
+  
+                case "bug":
+                  iconTypePokemon = 'bug'
+                  break;
+  
+                case "flying":
+                  iconTypePokemon = 'flying'
+                  break;
+  
+                case "poison":
+                  iconTypePokemon = 'poison'
+                  break;
+  
+                case "electric":
+                  iconTypePokemon = 'electric'
+                  break;
+  
+                case "ground":
+                  iconTypePokemon = 'ground'
+                  break;
+  
+                case "fighting":
+                  iconTypePokemon = 'fighting'
+                  break;
+  
+                case "fairy":
+                  iconTypePokemon = 'fairy'
+                  break;
+  
+                case "rock":
+                  iconTypePokemon = 'rock'
+                  break;
+  
+                case "ghost":
+                  iconTypePokemon = 'ghost'
+                  break;
+  
+                case "steel":
+                  iconTypePokemon = 'steel'
+                  break;
+  
+                case "stellar":
+                  iconTypePokemon = 'stellar'
+                  break;
+  
+                case "psychic":
+                  iconTypePokemon = 'psychic'
+                  break;
+  
+                case "ice":
+                  iconTypePokemon = 'ice';
+                  break;
+  
+                case "dragon":
+                  iconTypePokemon = 'dragon';
+                  break;
+  
+                case "dark":
+                  iconTypePokemon = 'dark';
+                  break;
+                default:
+                  break;
+              }
+            return(
+              <ContainerType>
+              <IconType src={`./images/${iconTypePokemon}.png`} alt="Icon type Pokemon" />
               <p key={index}>{type.type.name}</p> 
+              </ContainerType>
             )
           })}
         </TypePokemon>
@@ -106,6 +184,16 @@ const H2 = styled.h2`
 `
 const TypePokemon = styled.div`
   display: flex;
+  align-items:center;
   gap:20px;
   text-transform:capitalize;
+`
+const ContainerType = styled.div`
+  display:flex;
+  gap:3px;
+  align-items:center;
+`
+const IconType = styled.img`
+  width: 20px;
+  height:20px;
 `

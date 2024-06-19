@@ -23,8 +23,9 @@ export function Ability(props) {
 }
 
 const H3 = styled.h3`
-    text-transform = capitalize;
+    text-transform: capitalize;
 `
 const P = styled.p`
-    text-transform = capitalize;
+    text-align:center;
+    max-width:800px;
 `
