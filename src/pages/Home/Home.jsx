@@ -47,7 +47,6 @@ export function Home() {
     const filteredPokemons = filteredPokemonsByType?.filter(
       (pokemon) => pokemon !== undefined
     );
-    console.log(filteredPokemons);
     if (isLoading) {
       return <TitleCarregando>Carregando...</TitleCarregando>;
     } else {

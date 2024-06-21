@@ -31,7 +31,6 @@ export function PokemonDetails() {
     }
     fetchData();
   }, [id]);
-  console.log(pokemon);
   return (
     <div
       style={{
