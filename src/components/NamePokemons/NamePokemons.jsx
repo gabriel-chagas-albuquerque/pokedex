@@ -6,7 +6,7 @@ export function NamePokemons({ namePokemons, count, pokemonType }) {
   const filteredPokemons = namePokemons?.slice(0, count);
 
     return (
-      <PokemonsList>
+      <PokemonsList style={{minHeight:'430px'}}>
         {filteredPokemons?.map((pokemon, index) => {
           return (
             <Pokemon
