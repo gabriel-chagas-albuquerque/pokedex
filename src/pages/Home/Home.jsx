@@ -130,6 +130,7 @@ export function Home() {
               <Logo src="../../images/logo.png" alt="Logo" />
               <Input
                 type="text"
+                placeholder="Pesquise aqui..."
                 value={busca}
                 onChange={(e) => setBusca(e.target.value)}
               />
